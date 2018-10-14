@@ -79,12 +79,21 @@ running:
     $ cd $GOPATH/src/github.com/thousandeyes/shoelaces
     $ go build
 
+#### Example of Building with Docker
+
+docker build -t shoelaces .
+
 ### Running Shoelaces
 You can quickly try Shoelaces after compiling it by using the example configuration file:
 
     ./shoelaces -config configs/shoelaces.conf
 
 Head to [localhost:8081](http://localhost:8081) to checkout Shoelaces' frontend.
+
+#### Running with Docker
+Easily run shoelaces in a Docker image:
+
+    docker run -P shoelaces -config configs/shoelaces-docker-quickstart.config
 
 ### Shoelaces configuration file
 Shoelaces accepts several parameters:
